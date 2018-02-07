@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Bot.cs" />
+    <Compile Include="Model\Game.cs" />
+    <Compile Include="Model\Line.cs" />
+    <Compile Include="Model\Node.cs" />
+    <Compile Include="Model\NodeStateEnum.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\PlayingField.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
