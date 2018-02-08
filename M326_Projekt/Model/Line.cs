@@ -27,7 +27,7 @@ namespace M326_Projekt.Model
             return Nodes[0].State == Nodes[1].State && Nodes[1].State == Nodes[2].State;
         }
 
-        public int NodesLeft()
+        public int EmptyNodesLeft()
         {
             return Nodes.Count(n => n.State == NodeStateEnum.Empty);
         }
