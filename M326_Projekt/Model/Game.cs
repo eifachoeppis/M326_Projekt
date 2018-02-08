@@ -10,7 +10,6 @@ namespace M326_Projekt.Model
     public class Game
     {
         int moves = 9;
-
         Player player1;
         Player player2;
         int player1Score;
@@ -21,7 +20,7 @@ namespace M326_Projekt.Model
         {
             get
             {
-                return $"{player1.Name} {player1Score} : {player2Score} {player2.Name}\n";
+                return $"{player1.Name} {player1Score} : {player2Score} {player2.Name}{Environment.NewLine}Stones left: {moves}{Environment.NewLine}";
             }
         }
 
@@ -48,13 +47,14 @@ namespace M326_Projekt.Model
         {
             try
             {
-                for (int i = 0; i < moves; i++)
+                while (moves > 0)
                 {
                     Render();
                     field.InsertNode(player1.MakeMove(field, NodeStateEnum.PlayerA), NodeStateEnum.PlayerA);
                     Render();
                     field.InsertNode(player2.MakeMove(field, NodeStateEnum.PlayerB), NodeStateEnum.PlayerB);
                     Render();
+                    moves--;
                 }
 
                 Console.Clear();
@@ -66,13 +66,13 @@ namespace M326_Projekt.Model
                 {
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     Console.WriteLine($@"
-                                                                                               %   
-   @@,  /@,  @@,,,,  &@    &@@    @@   @@, .@@*   @@@    @%  ,@@/    @   @@,,,,   @@@    &%   .@   
+                                                                                                  
+   @@//@,    @@@@@@  &@    &@@    @@   @@, .@@*   @@@    @%  ,@@/    @   @@@@@@   @@@    &%    @   
  *@          @@       @(   @.@   .@  .@      *@,  @.@@   @%  ,@ @%   @   @@       @(@@   &%    @   
  @@   %%%%   @@@@@@   /@  (& &&  @#  %@       @%  @. #@  @%  ,@  @%  @   @@@@@@   @( #@  &%    @   
  @@      @,  @@        @( @   @..@   (@       @/  @.  (@ @%  ,@   @@ @   @@       @(  ,@ &%    @   
   @@     @,  @@        .@%@   &@@,    @@     @@   @.   *@@%  ,@    @@@   @@       @(   *@@%        
-    ,&@@%    /%%%%%*    #%     %%       #@@&*     %      %.   %     ,%   /%%%%%*  %*     %.   .@   
+    ,&@@%    /%%%%%*    #%     %%       #@@&*     %      %.   %     ,%   /%%%%%*  %*     %.    @   
 
 ");
                 }
