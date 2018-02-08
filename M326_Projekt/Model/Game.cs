@@ -80,10 +80,9 @@ namespace M326_Projekt.Model
                     Console.WriteLine($"{player2.Name} hat gewonnen");
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 Console.Clear();
-                Console.WriteLine(ex);
                 Console.WriteLine("Invalid move. You lost!");
             }
         }

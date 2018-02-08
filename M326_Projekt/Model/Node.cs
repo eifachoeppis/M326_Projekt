@@ -18,11 +18,11 @@ namespace M326_Projekt.Model
             {
                 case NodeStateEnum.PlayerA:
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write("X");
+                    Console.Write(" X");
                     break;
                 case NodeStateEnum.PlayerB:
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.Write("O");
+                    Console.Write(" O");
                     break;
                 default:
                     Console.Write($"{Position:D2}");
