@@ -21,14 +21,14 @@ namespace M326_Projekt.Model
                     Console.Write(" X");
                     break;
                 case NodeStateEnum.PlayerB:
-                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.Write(" O");
                     break;
                 default:
                     Console.Write($"{Position:D2}");
                     break;
             }
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
         }
     }
 }

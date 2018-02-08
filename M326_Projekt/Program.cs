@@ -11,6 +11,9 @@ namespace M326_Projekt
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Black;
+
             string input;
 
             do
