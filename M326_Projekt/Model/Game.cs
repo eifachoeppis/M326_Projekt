@@ -21,7 +21,7 @@ namespace M326_Projekt.Model
         {
             get
             {
-                return $"{player1.Name} {player1Score} : {player2Score} {player2.Name}";
+                return $"{player1.Name} {player1Score} : {player2Score} {player2.Name}\n";
             }
         }
 
@@ -64,7 +64,16 @@ namespace M326_Projekt.Model
                 }
                 else if (player1Score > player2Score)
                 {
-                    Console.WriteLine($"{player1.Name} hat gewonnen");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($@"
+
+    ,#%%#. /%%%#*,(   *(.  *(. *(%%/.  /#*   /. .#*   /. .%%%%* .#*   /.  (/   
+  /#,      #%     %, .#%# .%( %,   .(/ (#((  #, .#((. #, ,%     .#((. #,  (/   
+  #*  #%%, %@%%*  *#,*/*#.*(..%     *# (# #/.#, .# #%.#, ,@%%#  .# #%.#,  //   
+  ,&(  .(/ #%      #%#. ,%#.  %/.  /%, (#  (%%, .#  .%%, ,%     .#  .%%,  ,,   
+   .,#%%(  /%%%#*  ,(/   #/    *#%%*.  /(   ,#. .(   ,#. .%%%%* .(   ,#.  /*   
+
+");
                 }
                 else
                 {

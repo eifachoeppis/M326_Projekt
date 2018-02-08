@@ -11,7 +11,18 @@ namespace M326_Projekt
     {
         static void Main(string[] args)
         {
-            var player1 = new User("test");
+            string input;
+
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("Enter Name:");
+                input = Console.ReadLine();
+
+
+            } while (String.IsNullOrWhiteSpace(input));
+
+            var player1 = new User(input);
             var player2 = new Bot();
             var game = new Game(player1, player2);
             game.Start();
