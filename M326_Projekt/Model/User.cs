@@ -14,7 +14,7 @@ namespace M326_Projekt.Model
             Name = name;
         }
 
-        public override int MakeMove(PlayingField field)
+        public override int MakeMove(PlayingField field, NodeStateEnum player)
         {
             Console.Write("Position: ");
             var input = Console.ReadLine();

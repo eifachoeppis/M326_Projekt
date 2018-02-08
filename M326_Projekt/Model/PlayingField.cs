@@ -134,12 +134,19 @@ namespace M326_Projekt.Model
             {
                 if (i % 2 == 0)
                 {
+                    int index = (i + 22) % 24;
+
+                    if (i % 8 == 0)
+                    {
+                        index = (index + 8) % 24;
+                    }
+
                     Lines[count] = new Line
                     {
                         Nodes = new Node[]
                         {
-                            Nodes[(i + 22) % 24],
-                            Nodes[(i + 23) % 24],
+                            Nodes[index],
+                            Nodes[index + 1],
                             Nodes[i]
                         }
                     };

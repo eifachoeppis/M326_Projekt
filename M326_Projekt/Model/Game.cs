@@ -51,9 +51,9 @@ namespace M326_Projekt.Model
                 for (int i = 0; i < moves; i++)
                 {
                     Render();
-                    field.InsertNode(player1.MakeMove(field), NodeStateEnum.PlayerA);
+                    field.InsertNode(player1.MakeMove(field, NodeStateEnum.PlayerA), NodeStateEnum.PlayerA);
                     Render();
-                    field.InsertNode(player2.MakeMove(field), NodeStateEnum.PlayerB);
+                    field.InsertNode(player2.MakeMove(field, NodeStateEnum.PlayerB), NodeStateEnum.PlayerB);
                     Render();
                 }
 

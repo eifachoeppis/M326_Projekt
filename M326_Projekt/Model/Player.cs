@@ -10,6 +10,6 @@ namespace M326_Projekt.Model
     public abstract class Player
     {
         public string Name { get; protected set; }
-        public abstract int MakeMove(PlayingField field);
+        public abstract int MakeMove(PlayingField field, NodeStateEnum player);
     }
 }
